@@ -18,7 +18,8 @@ def solve_div_days(date_lic: datetime) -> int:
 
 
 def set_data_post(days: int) -> dict:
-    # В задании ошибка, не учтено само значение в 7 дней, либо больше, либо меньше
+    # В задании ошибка, не учтено само значение в 7 дней
+    # либо больше, либо меньше
     if div_days >= 7:
         values = {"days": div_days, "alarm": False}
     elif div_days < 7:
@@ -31,6 +32,7 @@ def show_site_data(req: request.Request):
         html = response.read()
         print(html.decode('utf-8'))
 
+
 if __name__ == '__main__':
     date_lic = get_date_lic(u1)
     div_days = solve_div_days(date_lic=date_lic)
@@ -38,5 +40,6 @@ if __name__ == '__main__':
     req = request.Request(u2, data=data,
                         headers={'content-type': 'application/json'})
 
-    print('Время и дата окончания лицензии: ', date_lic.strftime('%H:%M %d/%m/%Y'))
+    print('Время и дата окончания лицензии: ', date_lic.strftime(
+                                                    '%H:%M %d/%m/%Y'))
     show_site_data(req)

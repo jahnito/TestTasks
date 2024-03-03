@@ -1,0 +1,290 @@
+[  {
+    "iface": "eth0",
+    "name": "rpci1",
+    "roletype": "rpci"
+  },
+  {
+    "iface": "eth0",
+    "name": "rpco1",
+    "roletype": "rpco"
+  },
+  {
+    "group": 0,
+    "iface": "eth0",
+    "name": "mic1",
+    "order": 1,
+    "roletype": "mic"
+  },
+  {
+    "group": 2,
+    "iface": "eth0",
+    "name": "ic1",
+    "order": 10,
+    "roletype": "ic"
+  },
+  {
+    "group": 3,
+    "iface": "eth0",
+    "name": "mware1",
+    "order": 10,
+    "roletype": "mware"
+  },
+  {
+    "group": 4,
+    "iface": "eth0",
+    "name": "reg1",
+    "order": 10,
+    "roletype": "sr"
+  },
+  {
+    "group": 5,
+    "iface": "eth0",
+    "name": "store1",
+    "order": 1,
+    "roletype": "st"
+  },
+  {
+    "group": 7,
+    "iface": "eth0",
+    "name": "usr1",
+    "order": 10,
+    "roletype": "usr"
+  },
+  {
+    "group": 12,
+    "iface": "eth0",
+    "name": "hunt1",
+    "order": 10,
+    "roletype": "huntq"
+  },
+  {
+    "group": 13,
+    "iface": "eth0",
+    "name": "statestore1",
+    "order": 10,
+    "roletype": "sts"
+  },
+  {
+    "group": 16,
+    "iface": "eth0",
+    "name": "vmail1",
+    "order": 10,
+    "roletype": "vmail"
+  },
+  {
+    "group": 17,
+    "iface": "eth0",
+    "name": "callstore1",
+    "order": 1,
+    "roletype": "callstore"
+  },
+  {
+    "group": 20,
+    "iface": "eth0",
+    "name": "wssubscr1",
+    "order": 10,
+    "roletype": "wssubscr"
+  },
+  {
+    "group": 21,
+    "iface": "eth0",
+    "name": "rsv1",
+    "order": 10,
+    "roletype": "rsv"
+  },
+  {
+    "group": 22,
+    "iface": "eth0",
+    "name": "sel1",
+    "order": 30,
+    "roletype": "sel"
+  },
+  {
+    "iface": "eth0",
+    "name": "svc1",
+    "roleid": 1,
+    "roletype": "scr",
+    "separate": true
+  },
+  {
+    "certdir": "alias://paths/a",
+    "httpport": 80,
+    "httpsport": 443,
+    "iface": "eth0",
+    "name": "ws1",
+    "roleid": 90,
+    "roletype": "ws"
+  },
+  {
+    "dbconnstrings": [
+      "alias://pgdb_strings/a"
+    ],
+    "group": 1,
+    "iface": "eth0",
+    "name": "mdc1",
+    "order": 1,
+    "roletype": "mdc"
+  },
+  {
+    "domainqlist": [
+      {
+        "key": "q04_master",
+        "patterns": "chatevents,userevents,alertcallevents,dcevents,ivrevents,ivrhuntqevents,providerevents,scriptevents,selectorevents,sipuserevents"
+      }
+    ],
+    "group": 19,
+    "iface": "eth0",
+    "name": "sq1",
+    "order": 10,
+    "qlist": [
+      {
+        "key": "q03_master",
+        "patterns": "mixerevents"
+      },
+      {
+        "key": "q01_master",
+        "patterns": "callevents,confevents"
+      }
+    ],
+    "roletype": "sq"
+  },
+  {
+    "group": 15,
+    "iface": "eth0",
+    "name": "mgc1",
+    "order": 10,
+    "port": 2954,
+    "roleid": 10,
+    "roletype": "mgc"
+  },
+  {
+    "iface": "eth0",
+    "name": "conf1",
+    "roleid": 20,
+    "roletype": "conf",
+    "separate": true,
+    "tcp": 5085,
+    "udp": 5085
+  },
+  {
+    "iface": "eth0",
+    "name": "ivr1",
+    "roleid": 30,
+    "roletype": "ivr",
+    "separate": true,
+    "tcp": 5095,
+    "udp": 5095
+  },
+  {
+    "channels": "2",
+    "encoding": "mp3",
+    "iface": "eth0",
+    "name": "mix1",
+    "roleid": 80,
+    "recstorageid": "local",
+    "roletype": "mix",
+    "samplerate": "8000",
+    "subscrqlist": [
+      "q03_master"
+    ]
+  },
+  {
+    "dbconnstrings": [
+      "alias://pgdb_strings/a"
+    ],
+    "domainsubscrqlist": [
+      "q04_master"
+    ],
+    "group": 18,
+    "iface": "eth0",
+    "name": "cdr1",
+    "order": 10,
+    "roletype": "cdr",
+    "subscrqlist": [
+      "q01_master"
+    ]
+  },
+  {
+    "group": 6,
+    "iface": "eth0",
+    "name": "logstore1",
+    "order": 10,
+    "roletype": "logstore",
+    "storedays": 5,
+    "storepath": "alias://paths/c",
+    "storesize": 1
+  },
+  {
+    "iface": "eth0",
+    "name": "esg1",
+    "payloads_audio_offer": [
+      "PCMA/8000",
+      "PCMU/8000"
+    ],
+    "roleid": 40,
+    "roletype": "esg",
+    "separate": true,
+    "tcp": 5080,
+    "udp": 5080
+  },
+  {
+    "dbconnstrings": [
+      "alias://pgdb_strings/a"
+    ],
+    "group": 14,
+    "iface": "eth0",
+    "intervalerrsec": 30,
+    "intervalsec": 30,
+    "mode": "move",
+    "name": "jrnl1",
+    "order": 10,
+    "roletype": "jrnl"
+  },
+  {
+    "allow_ac_set": false,
+    "check_by_options_on_limit": true,
+    "iface": "eth0",
+    "name": "b2bua1",
+    "record_conf": true,
+    "record_ivr": true,
+    "roleid": 50,
+    "roletype": "b2b",
+    "separate": true,
+    "tcp": 5090,
+    "udp": 5090
+  },
+  {
+    "certdir": "alias://paths/a",
+    "iface": "eth0",
+    "name": "sg1",
+    "roleid": 60,
+    "roletype": "sg",
+    "separate": true,
+    "tcp": 5060,
+    "translit": false,
+    "udp": 5060,
+    "wss": 5063
+  },
+  {
+    "iface": "eth0",
+    "logmaxsize": 15,
+    "logtrace": [
+      "error"
+    ],
+    "mgcgroup": 15,
+    "mgrecordcalls": "alias://paths/b",
+    "name": "mg1",
+    "port": 2945,
+    "roleid": 70,
+    "roletype": "mg",
+    "rtpiface": "eth0",
+    "separate": true
+  },
+  {
+    "group": 31,
+    "iface": "eth0",
+    "name": "recmov1",
+    "order": 1,
+    "roletype": "recmover"
+  }
+ ]
