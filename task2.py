@@ -6,11 +6,11 @@ with open('task2_part1_roles.json') as f:
     roles = json.load(f)
 
 new_roles = []
-roleids = []
+roleids = set()
 
 for i in roles:
     if 'roleid' in i:
-        roleids.append(i['roleid'])
+        roleids.add(i['roleid'])
 
 
 for i in roles:
@@ -26,11 +26,14 @@ for i in roles:
         while x in roleids:
             x = random.randint(1, 100)
         roleid = x
+        # Исправление ошибки не уникальности, вместо списка использовано множество
+        roleids.add(x)
         new_role.update({'roleid':roleid})
     for j in i:
         if j not in ('name', 'order', 'roleid'):
             new_role.update({j:i[j]})
     new_roles.append(new_role)
+
 
 rol_names = []
 for i in new_roles:
